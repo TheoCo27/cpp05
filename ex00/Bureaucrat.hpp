@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 22:08:01 by tcohen            #+#    #+#             */
-/*   Updated: 2025/02/21 22:14:47 by tcohen           ###   ########.fr       */
+/*   Updated: 2025/03/10 19:35:35 by raphco           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+
+//Need to implmenet exeption for grade too high or grade too low 
+//Need to implmenet increment and decrement operator for grade
+//need to implmeent the overload operator to print stuff 
 
 class Bureaucrat
 {

@@ -6,7 +6,7 @@
 /*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 22:07:56 by tcohen            #+#    #+#             */
-/*   Updated: 2025/03/24 20:10:19 by raphco           ###   ########.fr       */
+/*   Updated: 2025/03/24 22:45:39 by raphco           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,20 @@ std::ostream &operator<<(std::ostream &stream, Bureaucrat const &other)
     return (stream);
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+    try
+    {
+        form.beSigned(*this);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "Bureraucrat " << this->_Name << " couldn't sign form " << form.GetName() << " because " << e.what() << '\n';
+    }
+    if (form.GetSigned())
+        std::cout << "Bureraucrat " << this->_Name << " signed form " << form.GetName() << '\n';
+    
+}
 
 // Exceptions
 const char *Bureaucrat::GradeTooHighException::what() const throw()

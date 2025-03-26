@@ -6,7 +6,7 @@
 #    By: raphco <raphco@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/21 22:08:08 by tcohen            #+#    #+#              #
-#    Updated: 2025/03/24 20:21:11 by raphco           ###   ########.fr        #
+#    Updated: 2025/03/24 22:36:38 by raphco           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,13 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJDIR = obj
 
 # Fichiers sources
-SRCS = Bureaucrat.cpp main.cpp
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
 
 # Fichiers objets correspondants
-OBJS = $(OBJDIR)/Bureaucrat.o $(OBJDIR)/main.o
+OBJS = $(OBJDIR)/Bureaucrat.o $(OBJDIR)/main.o $(OBJDIR)/Form.o 
 
 # Nom du programme final
-TARGET = Bureaucrat
+TARGET = Form
 
 # Règle par défaut pour construire le programme
 all: $(TARGET)

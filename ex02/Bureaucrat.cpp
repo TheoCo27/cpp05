@@ -6,7 +6,7 @@
 /*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 22:07:56 by tcohen            #+#    #+#             */
-/*   Updated: 2025/03/24 22:45:39 by raphco           ###   ########.fr       */
+/*   Updated: 2025/03/26 06:19:01 by raphco           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ std::ostream &operator<<(std::ostream &stream, Bureaucrat const &other)
     return (stream);
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &form)
 {
     try
     {

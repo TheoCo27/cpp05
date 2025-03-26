@@ -72,6 +72,21 @@ void AForm::beSigned(Bureaucrat &signer)
     else
         this->_signed = 1;
 }
+
+void AForm::SetSigned(bool status)
+{
+    this->_signed = status;
+}
+void AForm::execute(Bureaucrat const & executor) const
+{
+    if(this->_GtoEx < executor.getGrade())
+        throw GradeTooLowException();
+    else if (this->_signed == 0)
+        throw NotSignedForm();
+    else
+        this->DoYourThing();
+}
+
 // Exceptions
 
 const char *AForm::GradeTooHighException:: what() const throw()
@@ -84,6 +99,12 @@ const char *AForm::GradeTooLowException:: what() const throw()
 {
     return ("Grade too low !");
 }
+
+const char *AForm::NotSignedForm:: what() const throw()
+{
+    return ("Signed hasn't been signed yet !");
+}
+
 
 std::ostream &operator<<(std::ostream &stream, AForm &other)
 {

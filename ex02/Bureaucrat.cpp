@@ -6,7 +6,7 @@
 /*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 22:07:56 by tcohen            #+#    #+#             */
-/*   Updated: 2025/03/26 06:43:59 by raphco           ###   ########.fr       */
+/*   Updated: 2025/03/26 07:48:22 by raphco           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void Bureaucrat::executeForm(AForm const & form)
     try
     {
         form.execute(*this);
-        std::cout << "Bureaucrat " << this->_Name << "succesfully executed form " << form.GetName() << std::endl;
+        std::cout << "Bureaucrat " << this->_Name << " succesfully executed form " << form.GetName() << std::endl;
     }
     catch(const std::exception& e)
     {

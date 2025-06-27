@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
+/*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 00:37:23 by raphco            #+#    #+#             */
-/*   Updated: 2025/03/26 07:47:47 by raphco           ###   ########.fr       */
+/*   Updated: 2025/06/28 00:51:16 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Pres
 }
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy)
 {
-(void)copy;
-
+    *this = copy;
 }
 PresidentialPardonForm::~PresidentialPardonForm()
 {
@@ -33,7 +32,10 @@ PresidentialPardonForm::~PresidentialPardonForm()
 }
 PresidentialPardonForm& PresidentialPardonForm:: operator=(const PresidentialPardonForm &copy)
 {
-    (void)copy;
+    if (this == &copy)
+        return (*this);
+    _target = copy._target;
+    this->SetSigned(copy.GetSigned());
     return(*this);
 }
 void PresidentialPardonForm::DoYourThing() const

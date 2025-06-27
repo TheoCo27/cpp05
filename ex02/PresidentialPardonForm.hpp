@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphco <raphco@student.42.fr>              +#+  +:+       +#+        */
+/*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 00:37:26 by raphco            #+#    #+#             */
-/*   Updated: 2025/03/26 07:42:03 by raphco           ###   ########.fr       */
+/*   Updated: 2025/06/28 01:51:44 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AForm.hpp"
+
 
 class PresidentialPardonForm : public AForm
 {
